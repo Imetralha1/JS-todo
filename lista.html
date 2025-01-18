@@ -1,0 +1,20 @@
+<input id="input" placeholder="Digite um item">
+<button id="botao" onclick="nomeDaFuncao()" >Adicionar</button>
+<div id="lista"></div>
+<script>
+ 
+
+ function nomeDaFuncao()
+ {
+     let lista = document.getElementById("lista")
+     let input = document.getElementById("input")  
+     let paragrafo = document.createElement("p")
+     paragrafo.innerText = input.value 
+     lista.appendChild(paragrafo)
+     input.value = ""
+    }
+</script>
+
+<style>
+
+</style>
