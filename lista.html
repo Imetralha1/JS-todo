@@ -4,17 +4,26 @@
 <script>
  
 
- function nomeDaFuncao()
- {
-     let lista = document.getElementById("lista")
+ function nomeDaFuncao(){
+ 
      let input = document.getElementById("input")  
-     let paragrafo = document.createElement("p")
-     paragrafo.innerText = input.value 
-     lista.appendChild(paragrafo)
-     input.value = ""
-    }
+     let lista = document.getElementById("lista")
+    
+    let div = document.createElement("div")
+    let texto = document.createTextNode(input.value)
+    
+    let check = document.createElement("input")
+    check.type = "checkbox"
+    check.value = input.value
+    div.appendChild(check)
+    div.appendChild(texto)
+
+    lista.appendChild(div)
+    input.value = ""
+}
+   
 </script>
 
 <style>
-
+  #lista{border-style: groove;}
 </style>
